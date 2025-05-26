@@ -1,0 +1,49 @@
+<!-- Exercise 5: Event Registration Form 
+
+Requirements:
+
+Fields: name (text), email (email), date (date), event type (select), message (textarea)
+Add placeholder, required, and autofocus
+Display confirmation using <output>
+Style with CSS -->
+<!-- Event Registration Form - Exercise 5 -->
+<form id="registrationForm" onsubmit="handleFormSubmit(event)" novalidate>
+    <div class="row g-3">
+        <div class="col-md-6">
+            <label for="userName" class="form-label">Full Name</label>
+            <input type="text" class="form-control" id="userName" 
+                   placeholder="Enter your full name" required autofocus>
+            <div class="invalid-feedback">Please provide your name.</div>
+        </div>
+        <div class="col-md-6">
+            <label for="userEmail" class="form-label">Email Address</label>
+            <input type="email" class="form-control" id="userEmail" 
+                   placeholder="your.email@example.com" required>
+            <div class="invalid-feedback">Please provide a valid email.</div>
+        </div>
+        <div class="col-md-6">
+            <label for="eventDate" class="form-label">Preferred Date</label>
+            <input type="date" class="form-control" id="eventDate" required>
+            <div class="invalid-feedback">Please select a date.</div>
+        </div>
+        <div class="col-12">
+            <label for="eventType" class="form-label">Event Type</label>
+            <select class="form-select" id="eventType" required onchange="showEventFee()">
+                <option value="">Choose an event type</option>
+                <option value="workshop">Workshop ($25)</option>
+                <option value="music">Music Concert ($15)</option>
+                <option value="sports">Sports Event ($10)</option>
+                <option value="community">Community Meeting (Free)</option>
+            </select>
+        </div>
+        <div class="col-12">
+            <label for="feedback" class="form-label">Additional Comments</label>
+            <textarea class="form-control" id="feedback" rows="4" 
+                      placeholder="Any special requirements or questions?" 
+                      onkeyup="countCharacters()"></textarea>
+        </div>
+    </div>
+</form>
+
+<!-- Form Output - Exercise 5 -->
+<output id="confirmationMessage" class="d-block mt-3"></output>

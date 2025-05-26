@@ -1,0 +1,54 @@
+<!-- Exercise 5: Alignment and Reordering in Grid
+Exercise 5.1: Center Content  -->
+
+<div class="container">
+    <div class="row align-items-center min-vh-100">
+        <div class="col-lg-6">
+            <!-- Hero content -->
+        </div>
+        <div class="col-lg-6">
+            <!-- Video container -->
+        </div>
+    </div>
+</div>
+
+<div class="col-lg-8 mx-auto"> <!-- mx-auto centers the column -->
+
+<!-- Exercise 5.2: Column Reordering -->
+
+
+     <!-- Replace the existing hero section row with this -->
+<div class="row align-items-center min-vh-100">
+    <div class="col-lg-6 order-lg-2">
+        <!-- Video container - shows second on desktop, first on mobile -->
+        <div class="video-container">
+            <video id="promoVideo" controls class="w-100 rounded shadow-lg" oncanplay="videoReady()">
+                <source src="https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/BigBuckBunny.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+            <div id="videoStatus" class="mt-2 text-center text-white-50" style="display: none;">
+                <i class="bi bi-play-circle me-1"></i>Video ready to play!
+            </div>
+        </div>
+    </div>
+    <div class="col-lg-6 order-lg-1">
+        <!-- Hero content - shows first on desktop, second on mobile -->
+        <div id="mainHeader" class="hero-content">
+            <h1 class="display-4 fw-bold text-white mb-4">
+                Welcome to Your <span class="highlight">Community Portal</span>
+            </h1>
+            <p class="lead text-white-50 mb-4">
+                Discover amazing local events, connect with neighbors, and stay engaged with your community. 
+                <span style="color: red; font-weight: bold;">Special Offer: Register for 3 events and get 1 free!</span>
+            </p>
+            <div class="hero-actions">
+                <button class="btn btn-primary btn-lg me-3" onclick="scrollToEvents()">
+                    <i class="bi bi-calendar-check me-2"></i>Explore Events
+                </button>
+                <button class="btn btn-outline-light btn-lg" data-bs-toggle="modal" data-bs-target="#registerModal">
+                    <i class="bi bi-person-plus me-2"></i>Register Now
+                </button>
+            </div>
+        </div>
+    </div>
+</div>

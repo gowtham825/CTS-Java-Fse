@@ -1,0 +1,43 @@
+/* Exercise 6: Link and List Styling 
+
+Requirements:
+
+Style links with :link, :hover, :active, :visited pseudo-classes
+/* Link Styling - Exercise 6 */
+.navbar-nav .nav-link:link {
+    text-decoration: none;
+}
+
+.navbar-nav .nav-link:hover {
+    color: white !important;
+    transform: translateY(-2px);
+}
+
+.navbar-nav .nav-link:active {
+    color: var(--accent-color) !important;
+}
+
+.navbar-nav .nav-link:visited {
+    color: rgba(255, 255, 255, 0.9) !important;
+}
+
+/* Use list-style-type, list-style-position, remove bullets */
+
+.navbar-nav {
+    text-align: center;
+    margin-top: 1rem;
+}
+
+.navbar-nav .nav-link {
+    color: rgba(255, 255, 255, 0.9) !important;
+    font-weight: 500;
+    margin: 0 0.5rem;
+    transition: all 0.3s ease;
+    position: relative;
+}
+
+/* Remove bullets and add custom styling */
+.navbar-nav .nav-item {
+    list-style-type: none;
+    padding: 0.5rem 0;
+}

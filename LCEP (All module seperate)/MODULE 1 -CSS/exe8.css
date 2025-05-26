@@ -1,0 +1,43 @@
+/* Exercise 8: Box Model & Layout Control
+
+Requirements:
+
+Use developer tools to inspect box model
+Add border, padding, margin to .eventCard
+Add outline to highlight selected fields
+Compare visibility: hidden vs. display: none */
+
+/* Box Model for Event Cards: */
+/* Box Model & Layout Control - Exercise 8 */
+.eventCard {
+    border: 1px solid var(--border-color);
+    padding: 0;
+    margin: 1rem 0;
+    outline: none;
+}
+
+.eventCard:focus {
+    outline: 3px solid var(--accent-color);
+    outline-offset: 2px;
+}
+
+.eventCard .card-body {
+    padding: 2rem;
+}
+
+/* Form Field Outlines: */
+.form-control:focus, .form-select:focus {
+    border-color: var(--primary-color);
+    box-shadow: 0 0 0 0.2rem rgba(79, 70, 229, 0.25);
+}
+
+
+/* Visibility vs Display: */
+/* Visibility examples */
+.hidden {
+    visibility: hidden;
+}
+
+.display-none {
+    display: none;
+}

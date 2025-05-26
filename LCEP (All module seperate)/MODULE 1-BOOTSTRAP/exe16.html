@@ -1,0 +1,84 @@
+<!-- Exercise 16.1: Fixed Footer -->
+
+<footer class="bg-dark text-white py-4 position-fixed bottom-0 w-100" style="z-index: 1020;">
+    <div class="container">
+        <div class="row align-items-center">
+            <div class="col-md-6">
+                <div class="d-flex align-items-center">
+                    <i class="bi bi-calendar-event me-2"></i>
+                    <span class="fw-bold">CommunityHub</span>
+                    <span class="text-white-50 ms-2">© 2025</span>
+                </div>
+            </div>
+
+            <footer class="bg-dark text-white py-4 position-fixed bottom-0 w-100" style="z-index: 1020;">
+    <div class="container">
+        <div class="row align-items-center">
+            <div class="col-md-6">
+                <div class="d-flex align-items-center">
+                    <i class="bi bi-calendar-event me-2"></i>
+                    <span class="fw-bold">CommunityHub</span>
+                    <span class="text-white-50 ms-2">© 2025</span>
+                </div>
+            </div>
+
+
+<!-- Exercise 16.2: Relative/Absolute Positioning for Badge Overlay -->
+
+ /* Update the createEventCard function in script.js */
+
+ <script>
+function createEventCard(event, index) {
+    const col = document.createElement('div');
+    col.className = 'col-lg-4 col-md-6 col-sm-12';
+    
+    const availability = event.checkAvailability();
+    const spotsLeft = event.seats - event.registrations;
+    
+    col.innerHTML = `
+        <div class="card eventCard h-100 position-relative" data-category="${event.category}">
+            <!-- Badge Overlay -->
+            <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger" style="z-index: 10;">
+                ${spotsLeft}
+                <span class="visually-hidden">spots available</span>
+            </span>
+            
+            <!-- Popular Badge for certain events -->
+            ${event.registrations > 10 ? `
+                <span class="position-absolute top-0 end-0 badge bg-warning text-dark m-2">
+                    <i class="bi bi-star-fill me-1"></i>Popular
+                </span>` : ''}
+            
+            <img src="${event.image}" class="card-img-top" alt="${event.title}" loading="lazy">
+            <div class="card-body d-flex flex-column">
+                <div class="event-badge mb-2">${event.category}</div>
+                <h5 class="card-title">${event.title}</h5>
+                <p class="card-text">${event.description}</p>
+                
+                <div class="event-meta">
+                    <div><i class="bi bi-calendar me-1"></i>${event.getFormattedDate()}</div>
+                    <div><i class="bi bi-geo-alt me-1"></i>${event.location}</div>
+                </div>
+                
+                <div class="event-meta">
+                    <div><i class="bi bi-currency-dollar me-1"></i>${event.price === 0 ? 'Free' : '$' + event.price}</div>
+                    <div><i class="bi bi-people me-1"></i>${spotsLeft} spots left</div>
+                </div>
+                
+                <div class="mt-auto">
+                    ${availability ? 
+                        `<button class="btn btn-primary w-100" onclick="registerForEvent(${event.id})">
+                            <i class="bi bi-calendar-plus me-2"></i>Register Now
+                        </button>` :
+                        `<button class="btn btn-secondary w-100" disabled>
+                            <i class="bi bi-calendar-x me-2"></i>Event Full
+                        </button>`
+                    }
+                </div>
+            </div>
+        </div>
+    `;
+    
+    return col;
+}
+</script>

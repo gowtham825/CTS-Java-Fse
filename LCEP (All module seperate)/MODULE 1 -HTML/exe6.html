@@ -1,0 +1,35 @@
+<!-- Exercise 6: Event Feedback with Events Handling 
+
+Requirements:
+
+onblur for phone validation
+onchange on dropdown for event fee
+onclick on submit button
+ondblclick on image to enlarge
+Capture key events in textarea for character count -->
+
+<!-- Phone field with onblur - Exercise 6 -->
+<input type="tel" class="form-control" id="phoneNumber" 
+       placeholder="(555) 123-4567" onblur="validatePhone()">
+
+<!-- Dropdown with onchange - Exercise 6 -->
+<select class="form-select" id="eventType" required onchange="showEventFee()">
+    <!-- options -->
+</select>
+<div id="eventFee" class="text-muted mt-1"></div>
+
+<!-- Submit button with onclick - Exercise 6 -->
+<button type="submit" class="btn btn-primary btn-lg w-100" 
+        onclick="showConfirmation()">
+    <i class="bi bi-check-circle me-2"></i>Register for Event
+</button>
+
+<!-- Images with ondblclick - Exercise 6 -->
+<img src="..." alt="..." class="gallery-img" ondblclick="enlargeImage(this)">
+
+<!-- Textarea with key events - Exercise 6 -->
+<textarea class="form-control" id="feedback" rows="4" 
+          onkeyup="countCharacters()"></textarea>
+<div class="form-text">
+    <span id="charCount">0</span>/500 characters
+</div>

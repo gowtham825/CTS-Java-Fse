@@ -1,0 +1,160 @@
+<!-- Exercise 18: Bootstrap 5 JavaScript Plugins
+Exercise 18.1: Modal Popup  -->
+
+<!-- Registration Modal -->
+<div class="modal fade" id="registerModal" tabindex="-1">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title">Quick Registration</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+            </div>
+            <div class="modal-body">
+                <p>Join our community portal...</p>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Trigger Button -->
+<button class="btn btn-outline-light btn-lg" data-bs-toggle="modal" data-bs-target="#registerModal">
+
+
+    <!-- Exercise 18.2: Collapsible Accordion -->
+
+<!-- Add this new section after the testimonials section -->
+<section id="faq" class="py-5">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 mx-auto">
+                <h2 class="text-center mb-5 fw-bold text-white">Frequently Asked Questions</h2>
+                
+                <!-- Accordion -->
+                <div class="accordion" id="faqAccordion">
+                    <div class="accordion-item">
+                        <h2 class="accordion-header" id="headingOne">
+                            <button class="accordion-button" type="button" data-bs-toggle="collapse" 
+                                    data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                                <i class="bi bi-question-circle me-2"></i>
+                                How do I register for events?
+                            </button>
+                        </h2>
+                        <div id="collapseOne" class="accordion-collapse collapse show" 
+                             aria-labelledby="headingOne" data-bs-parent="#faqAccordion">
+                            <div class="accordion-body">
+                                <p>Registration is simple! Just browse our events, click on the event you're interested in, 
+                                and fill out the registration form. You'll receive a confirmation email with all the details.</p>
+                                <ul>
+                                    <li>Browse events by category or search</li>
+                                    <li>Click "Register Now" on your chosen event</li>
+                                    <li>Fill out the registration form</li>
+                                    <li>Receive confirmation email</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="accordion-item">
+                        <h2 class="accordion-header" id="headingTwo">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" 
+                                    data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                                <i class="bi bi-credit-card me-2"></i>
+                                What are the payment options?
+                            </button>
+                        </h2>
+                        <div id="collapseTwo" class="accordion-collapse collapse" 
+                             aria-labelledby="headingTwo" data-bs-parent="#faqAccordion">
+                            <div class="accordion-body">
+                                <p>We accept various payment methods to make it convenient for everyone:</p>
+                                <div class="row g-3">
+                                    <div class="col-sm-6">
+                                        <div class="card border-0 bg-light">
+                                            <div class="card-body text-center">
+                                                <i class="bi bi-credit-card display-6 text-primary"></i>
+                                                <h6 class="mt-2">Credit/Debit Cards</h6>
+                                                <small class="text-muted">Visa, Mastercard, Amex</small>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-sm-6">
+                                        <div class="card border-0 bg-light">
+                                            <div class="card-body text-center">
+                                                <i class="bi bi-paypal display-6 text-primary"></i>
+                                                <h6 class="mt-2">Digital Wallets</h6>
+                                                <small class="text-muted">PayPal, Apple Pay, Google Pay</small>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="accordion-item">
+                        <h2 class="accordion-header" id="headingThree">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" 
+                                    data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                                <i class="bi bi-calendar-x me-2"></i>
+                                Can I cancel my registration?
+                            </button>
+                        </h2>
+                        <div id="collapseThree" class="accordion-collapse collapse" 
+                             aria-labelledby="headingThree" data-bs-parent="#faqAccordion">
+                            <div class="accordion-body">
+                                <p>Yes, you can cancel your registration with the following conditions:</p>
+                                <div class="alert alert-info">
+                                    <h6><i class="bi bi-info-circle me-2"></i>Cancellation Policy</h6>
+                                    <ul class="mb-0">
+                                        <li><strong>Free Events:</strong> Cancel anytime up to 24 hours before</li>
+                                        <li><strong>Paid Events:</strong> Full refund if cancelled 48+ hours before</li>
+                                        <li><strong>Workshops:</strong> 50% refund if cancelled 24-48 hours before</li>
+                                        <li><strong>Same Day:</strong> No refund, but credit for future events</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="accordion-item">
+                        <h2 class="accordion-header" id="headingFour">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" 
+                                    data-bs-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
+                                <i class="bi bi-geo-alt me-2"></i>
+                                Where are events held?
+                            </button>
+                        </h2>
+                        <div id="collapseFour" class="accordion-collapse collapse" 
+                             aria-labelledby="headingFour" data-bs-parent="#faqAccordion">
+                            <div class="accordion-body">
+                                <p>Our events are held at various locations throughout the community:</p>
+                                <div class="row g-3">
+                                    <div class="col-md-4">
+                                        <div class="text-center">
+                                            <i class="bi bi-building display-4 text-primary"></i>
+                                            <h6 class="mt-2">Community Center</h6>
+                                            <small class="text-muted">Main venue for workshops and meetings</small>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-4">
+                                        <div class="text-center">
+                                            <i class="bi bi-tree display-4 text-success"></i>
+                                            <h6 class="mt-2">Central Park</h6>
+                                            <small class="text-muted">Outdoor events and sports</small>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-4">
+                                        <div class="text-center">
+                                            <i class="bi bi-music-note display-4 text-info"></i>
+                                            <h6 class="mt-2">City Square</h6>
+                                            <small class="text-muted">Concerts and festivals</small>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

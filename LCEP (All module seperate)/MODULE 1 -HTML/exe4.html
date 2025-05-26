@@ -1,0 +1,43 @@
+<!-- Exercise 4: Image Gallery for Community Events 
+
+Requirements:
+
+Use <table> with 2 rows and 3 columns of <img> tags
+Include alt, title, and style with borders using class
+Add caption -->
+<!-- Image Gallery Section - Exercise 4 -->
+<section id="gallery" class="py-5">
+    <div class="container">
+        <h2 class="text-center mb-5 fw-bold">Past Event Highlights</h2>
+        <div class="table-responsive">
+            <table class="gallery-table table table-borderless">
+                <caption>Community event photo gallery showcasing our vibrant local activities</caption>
+                <tbody>
+                    <tr>
+                        <td>
+                            <img src="https://images.unsplash.com/photo-1511795409834-ef04bbd61622?w=300&h=200&fit=crop" 
+                                 alt="Community Festival" title="Annual Summer Festival" 
+                                 class="gallery-img" ondblclick="enlargeImage(this)">
+                            <p class="text-center mt-2 small">Summer Festival 2024</p>
+                        </td>
+                        <td>
+                            <img src="https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&h=200&fit=crop" 
+                                 alt="Music Concert" title="Local Band Concert" 
+                                 class="gallery-img" ondblclick="enlargeImage(this)">
+                            <p class="text-center mt-2 small">Music in the Park</p>
+                        </td>
+                        <td>
+                            <img src="https://images.unsplash.com/photo-1530103862676-de8c9debad1d?w=300&h=200&fit=crop" 
+                                 alt="Sports Event" title="Community Sports Day" 
+                                 class="gallery-img" ondblclick="enlargeImage(this)">
+                            <p class="text-center mt-2 small">Sports Championship</p>
+                        </td>
+                    </tr>
+                    <tr>
+                        <!-- Second row with 3 more images -->
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</section>

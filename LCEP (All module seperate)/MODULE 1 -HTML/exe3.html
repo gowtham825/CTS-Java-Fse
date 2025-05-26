@@ -1,0 +1,25 @@
+<!-- Exercise 3: Welcome Message with Styling and ID/Class 
+
+Requirements:
+
+Use <div id="welcomeBanner"> with blue background via internal CSS
+Use inline styles for special offer (color red, bold)
+Apply .highlight class for visual emphasis -->
+<!-- Internal CSS for body background - Exercise 1 -->
+<style>
+    body {
+        background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        font-family: 'Inter', sans-serif;
+    }
+</style>
+
+<!-- Welcome Message - Exercise 3 -->
+<div id="mainHeader" class="hero-content">
+    <h1 class="display-4 fw-bold text-white mb-4">
+        Welcome to Your <span class="highlight">Community Portal</span>
+    </h1>
+    <p class="lead text-white-50 mb-4">
+        Discover amazing local events, connect with neighbors, and stay engaged with your community. 
+        <span style="color: red; font-weight: bold;">Special Offer: Register for 3 events and get 1 free!</span>
+    </p>
+</div>

@@ -1,0 +1,28 @@
+/* Exercise 9: Multiple Columns in Text 
+
+Requirements:
+
+Create news article section with column-count: 2
+Use column-gap: 30px
+Add column-rule: 1px solid gray */
+
+
+/* Multi-column Layout: */
+/* Multiple Columns - Exercise 9 */
+.news-columns {
+    column-count: 2;
+    column-gap: 3rem;
+    column-rule: 2px solid var(--border-color);
+    text-align: justify;
+    line-height: 1.8;
+}
+
+.news-columns h4 {
+    column-span: all;
+    text-align: center;
+    margin-bottom: 2rem;
+    color: var(--primary-color);
+}
+
+
+

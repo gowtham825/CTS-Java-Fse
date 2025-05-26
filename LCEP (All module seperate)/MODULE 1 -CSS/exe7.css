@@ -1,0 +1,41 @@
+/* Exercise 7: Table Styling 
+
+Requirements:
+
+
+
+Style table, th, td with borders, padding, background
+/* Table Styling - Exercise 7 */
+.gallery-table {
+    background: white;
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: var(--shadow);
+}
+
+.gallery-table td {
+    padding: 2rem;
+    text-align: center;
+    border: none;
+    vertical-align: top;
+}
+
+
+/* Add zebra striping with nth-child(even) */
+/* Note: Zebra striping could be added with: */
+/* 
+.gallery-table tr:nth-child(even) {
+    background-color: rgba(0, 0, 0, 0.05);
+}
+*/
+
+
+
+/* Use border-collapse: collapse and text-align: center */ 
+.table-responsive {
+    /* Bootstrap responsive table wrapper */
+}
+
+.gallery-table caption {
+    /* Caption styling for accessibility */
+}

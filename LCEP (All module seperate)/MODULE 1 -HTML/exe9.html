@@ -1,0 +1,54 @@
+<!-- Exercise 9: Geolocation for Event Mapping 
+
+Requirements:
+
+Create "Find Nearby Events" button
+Use getCurrentPosition to get coordinates
+Handle permission denial and timeouts
+Use high accuracy options -->
+
+<!-- Find Nearby Button - Exercise 9 -->
+<li class="nav-item">
+    <button class="btn btn-outline-light ms-2" onclick="findNearbyEvents()">
+        <i class="bi bi-geo-alt"></i> Find Nearby
+    </button>
+</li>
+
+<!-- js code
+-->
+<script>
+function findNearbyEvents() {
+    const options = {
+        enableHighAccuracy: true,
+        timeout: 10000,
+        maximumAge: 300000 // 5 minutes
+    };
+    
+    navigator.geolocation.getCurrentPosition(
+        (position) => {
+            const { latitude, longitude } = position.coords;
+            showNotification(
+                `Location found! Lat: ${latitude.toFixed(4)}, Lon: ${longitude.toFixed(4)}`,
+                'success'
+            );
+        },
+        (error) => {
+            // Handle permission denial, timeouts, etc.
+            let message = 'Unable to retrieve location';
+            switch(error.code) {
+                case error.PERMISSION_DENIED:
+                    message = 'Location access denied by user';
+                    break;
+                case error.POSITION_UNAVAILABLE:
+                    message = 'Location information unavailable';
+                    break;
+                case error.TIMEOUT:
+                    message = 'Location request timed out';
+                    break;
+            }
+            showNotification(message, 'warning');
+        },
+        options
+    );
+}
+</script>

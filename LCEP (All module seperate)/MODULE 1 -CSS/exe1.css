@@ -1,0 +1,40 @@
+/* Exercise 1: Why CSS? Inline vs. Internal vs. External 
+
+Requirements:
+
+Apply inline style to make one heading red
+Use embedded <style> tag in <head> for body background
+Link external stylesheet styles.css
+Add comments to label sections */
+/* Inline Style: */
+
+
+/* <span style="color: red; font-weight: bold;">Special Offer: Register for 3 events and get 1 free!</span> */
+
+
+/* Internal CSS: */
+
+/* Internal CSS for body background - Exercise 1 */
+body {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    font-family: 'Inter', sans-serif;
+}
+
+
+/* External CSS Link: */
+
+/* <link rel="stylesheet" href="style.css"> */
+
+
+
+/* Comments in CSS: */
+/* ========================================
+   COMMUNITY EVENT PORTAL STYLES
+   Theme: Modern, Clean, Responsive
+======================================== */
+
+/* Global Styles */
+/* Typography Enhancements - Exercise 5 */
+/* Color and Background Styling - Exercise 4 */
+/* Navigation Styles */
+/* Link Styling - Exercise 6 */

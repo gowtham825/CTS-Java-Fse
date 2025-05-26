@@ -1,0 +1,34 @@
+/* Exercise 2: CSS Syntax and Comments 
+
+Requirements:
+
+Create section with formatted rules and consistent indentation
+Add descriptive comments above selectors
+Example CTA button styling */
+/* Style for main CTA button */
+.hero-actions .btn {
+    padding: 1rem 2rem;
+    font-weight: 600;
+    border-radius: 50px;
+    transition: all 0.3s ease;
+}
+
+/* Event Cards - Bootstrap Integration */
+.eventCard {
+    background: white;
+    border-radius: 20px;
+    overflow: hidden;
+    transition: all 0.3s ease;
+    border: none;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+    margin-bottom: 2rem;
+}
+
+/* Form Styling - Exercise 5 */
+.form-control, .form-select {
+    border: 2px solid var(--border-color);
+    border-radius: 10px;
+    padding: 0.75rem 1rem;
+    font-size: 1rem;
+    transition: all 0.3s ease;
+}

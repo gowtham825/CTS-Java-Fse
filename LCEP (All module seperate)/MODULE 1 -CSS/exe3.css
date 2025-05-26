@@ -1,0 +1,57 @@
+/* Exercise 3: Selectors Playground 
+
+Requirements:
+
+Universal selector * for margin/padding reset
+Element selector for all <h2>
+ID selector #mainHeader
+Class selector .eventCard
+Grouping selector for h3, p */
+/* Universal Selector - Reset Margin and Padding */
+/* Global Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+/* Element Selectors: */
+/* Typography Enhancements - Exercise 5 */
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 600;
+    line-height: 1.2;
+    letter-spacing: -0.02em;
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    line-height: 1.6;
+    color: var(--text-primary);
+    overflow-x: hidden;
+}
+/* ID Selector: */
+/* Welcome banner styling referenced via #mainHeader */
+#mainHeader {
+    /* Styled through .hero-content class in implementation */
+}
+
+/* Class Selector: */
+.eventCard {
+    background: white;
+    border-radius: 20px;
+    overflow: hidden;
+    transition: all 0.3s ease;
+    border: none;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+    margin-bottom: 2rem;
+}
+
+/* Grouping Selector: */
+/* Grouping selectors for consistent styling */
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 600;
+    line-height: 1.2;
+    letter-spacing: -0.02em;
+}
+

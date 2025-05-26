@@ -1,0 +1,44 @@
+
+<!-- Exercise 9.1: -->
+<button class="btn btn-primary btn-lg me-3">Explore Events</button>
+<button class="btn btn-outline-light btn-lg">Register Now</button>
+<button class="btn btn-outline-secondary">Save Preferences</button>
+<button class="btn btn-outline-danger">Clear Preferences</button>
+<button class="btn btn-primary w-100">Register for Event</button>
+
+<!-- Exercise 9.2: Button Groups -->
+ <!-- Replace the filter controls section with this enhanced version -->
+<div class="filter-controls mb-4">
+    <select id="categoryFilter" class="form-select w-auto d-inline-block me-3" onchange="filterEvents()">
+        <option value="">All Categories</option>
+        <option value="workshop">Workshops</option>
+        <option value="music">Music</option>
+        <option value="sports">Sports</option>
+        <option value="community">Community</option>
+    </select>
+    
+    <!-- Button Group for View Options -->
+    <div class="btn-group me-3" role="group" aria-label="View options">
+        <input type="radio" class="btn-check" name="viewOptions" id="gridView" autocomplete="off" checked>
+        <label class="btn btn-outline-primary" for="gridView">
+            <i class="bi bi-grid-3x3-gap"></i> Grid
+        </label>
+        
+        <input type="radio" class="btn-check" name="viewOptions" id="listView" autocomplete="off">
+        <label class="btn btn-outline-primary" for="listView">
+            <i class="bi bi-list"></i> List
+        </label>
+    </div>
+    
+    <!-- Toggle Button Group for Filters -->
+    <div class="btn-group" role="group" aria-label="Filter toggles">
+        <input type="checkbox" class="btn-check" id="freeEventsOnly" autocomplete="off">
+        <label class="btn btn-outline-success" for="freeEventsOnly">Free Only</label>
+        
+        <input type="checkbox" class="btn-check" id="upcomingOnly" autocomplete="off" checked>
+        <label class="btn btn-outline-info" for="upcomingOnly">Upcoming</label>
+    </div>
+    
+    <input type="text" id="searchEvents" class="form-control w-auto d-inline-block ms-3" 
+           placeholder="Search events..." onkeydown="searchEvents(event)" style="min-width: 200px;">
+</div>

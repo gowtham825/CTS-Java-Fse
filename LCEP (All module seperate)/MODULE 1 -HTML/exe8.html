@@ -1,0 +1,43 @@
+<!-- Exercise 8: Saving User Preferences 
+
+Requirements:
+
+Save selected event type in localStorage
+Retrieve and pre-select on reload
+"Clear Preferences" button for both localStorage and sessionStorage -->
+
+<!-- User Preferences - Exercise 8 -->
+<div class="card mt-4 shadow-lg border-0">
+    <div class="card-body">
+        <h5 class="card-title">User Preferences</h5>
+        <div class="d-flex gap-2">
+            <button class="btn btn-outline-secondary" onclick="savePreferences()">
+                Save Preferences
+            </button>
+            <button class="btn btn-outline-danger" onclick="clearPreferences()">
+                Clear Preferences
+            </button>
+        </div>
+        <div id="savedPreferences" class="mt-2 text-muted"></div>
+    </div>
+</div>
+
+<!--Save to localStorage -->
+<script>
+function savePreferences() {
+    const preferences = {
+        preferredEventType: eventType ? eventType.value : '',
+        preferredCategory: categoryFilter ? categoryFilter.value : '',
+        savedAt: new Date().toISOString()
+    };
+    localStorage.setItem('communityPortalPreferences', JSON.stringify(preferences));
+    sessionStorage.setItem('lastActivity', new Date().toISOString());
+}
+
+// Clear both storages
+function clearPreferences() {
+    localStorage.removeItem('communityPortalPreferences');
+    sessionStorage.removeItem('lastActivity');
+   
+}
+ </script>

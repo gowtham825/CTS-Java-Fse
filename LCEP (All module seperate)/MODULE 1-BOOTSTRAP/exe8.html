@@ -1,0 +1,88 @@
+<!-- Exercise 8: Forms
+Exercise 8.1: Bootstrap Form Components  -->
+<form id="registrationForm" onsubmit="handleFormSubmit(event)" novalidate>
+    <div class="row g-3">
+        <div class="col-md-6">
+            <label for="userName" class="form-label">Full Name</label>
+            <input type="text" class="form-control" id="userName" 
+                   placeholder="Enter your full name" required autofocus>
+            <div class="invalid-feedback">Please provide your name.</div>
+        </div>
+        <div class="col-12">
+            <select class="form-select" id="eventType" required>
+                <option value="">Choose an event type</option>
+            </select>
+        </div>
+    </div>
+</form>
+
+
+<!-- Exercise 8.2: Form Floating -->
+
+<!-- Replace the existing registration form with this -->
+<form id="registrationForm" onsubmit="handleFormSubmit(event)" novalidate>
+    <div class="row g-3">
+        <!-- Floating Labels Form -->
+        <div class="col-md-6">
+            <div class="form-floating">
+                <input type="text" class="form-control" id="userName" 
+                       placeholder="Enter your full name" required autofocus>
+                <label for="userName">Full Name</label>
+            </div>
+            <div class="invalid-feedback">Please provide your name.</div>
+        </div>
+        <div class="col-md-6">
+            <div class="form-floating">
+                <input type="email" class="form-control" id="userEmail" 
+                       placeholder="your.email@example.com" required>
+                <label for="userEmail">Email Address</label>
+            </div>
+            <div class="invalid-feedback">Please provide a valid email.</div>
+        </div>
+        <div class="col-md-6">
+            <div class="form-floating">
+                <input type="tel" class="form-control" id="phoneNumber" 
+                       placeholder="(555) 123-4567" onblur="validatePhone()">
+                <label for="phoneNumber">Phone Number</label>
+            </div>
+            <div class="invalid-feedback">Please provide a valid phone number.</div>
+        </div>
+        <div class="col-md-6">
+            <div class="form-floating">
+                <input type="date" class="form-control" id="eventDate" required>
+                <label for="eventDate">Preferred Date</label>
+            </div>
+            <div class="invalid-feedback">Please select a date.</div>
+        </div>
+        <div class="col-12">
+            <div class="form-floating">
+                <select class="form-select" id="eventType" required onchange="showEventFee()">
+                    <option value="">Choose an event type</option>
+                    <option value="workshop">Workshop ($25)</option>
+                    <option value="music">Music Concert ($15)</option>
+                    <option value="sports">Sports Event ($10)</option>
+                    <option value="community">Community Meeting (Free)</option>
+                </select>
+                <label for="eventType">Event Type</label>
+            </div>
+            <div class="invalid-feedback">Please select an event type.</div>
+            <div id="eventFee" class="text-muted mt-1"></div>
+        </div>
+        <div class="col-12">
+            <div class="form-floating">
+                <textarea class="form-control" id="feedback" rows="4" 
+                          placeholder="Any special requirements or questions?" 
+                          onkeyup="countCharacters()" style="height: 120px;"></textarea>
+                <label for="feedback">Additional Comments</label>
+            </div>
+            <div class="form-text">
+                <span id="charCount">0</span>/500 characters
+            </div>
+        </div>
+        <div class="col-12">
+            <button type="submit" class="btn btn-primary btn-lg w-100" onclick="showConfirmation()">
+                <i class="bi bi-check-circle me-2"></i>Register for Event
+            </button>
+        </div>
+    </div>
+</form>
